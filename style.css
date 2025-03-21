@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.container{
+    margin: 2%;
+    /* padding: 2%; */
+    /* justify-content: center; */
+    justify-items: center;
+    margin-top: 22%;
+    position: relative;
+    perspective: 1000px;
+   
+}
+
+.card{
+    
+    
+    /* display: block; */
+    /* margin: 3%; */
+    /* border: 0.1cap solid ; */
+    width: 250px;
+    height: 150px;
+    
+    
+
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* z-index: 1; */
+    /* transform: translateX(-50%); */
+    /* text-align: center;
+     */
+     transition: transform 0.5s;
+     transform-style: preserve-3d;
+}
+
+/* for flip*/
+
+
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 0 5px ;
+    border-radius: 4%;
+    background-color: rgba(20, 15, 183, 0.212);
+
+    
+
+
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+
+
+    transform: rotateY(0deg);
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* border: 0.1cap solid; */
+    box-shadow: 0 0 5px ;
+    border-radius: 4%;
+    background-color: rgba(14, 23, 192, 0.451);
+
+
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+
+    transform: rotateY(180deg);
+
+}
+
+
+.card.flip .front{
+    transform: rotateY(180deg);
+}
+
+.card.flip .back{
+    transform: rotateY(0deg);
+}
+
+.strip{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+}
+
+.cvv{
+    margin: 2%;
+    margin-top: 4%;
+    width: 90%;
+    height: 30px;
+    background-color: white;
+    align-content: center;
+}
+
+#cvvno{
+    background-color: antiquewhite;
+    justify-self: end;
+    /* margin: 3%; */
+    padding: 2.3%;
+    width: 30px;
+    height: 30px;
+    /* height: 100%; */
+}
+
+
+.imag{
+    display: flex;
+}
+
+.chipimg{
+    margin-left: 8%;
+    margin-top: 10%;
+    display: flex;
+}
+
+.chipimg img{
+    width: 30px;
+}
+
+.cardimag{
+    margin-top: 5%;
+    margin-left: 40%;
+    
+}
+
+img{
+    width: 50px;
+}
+
+.cno{
+    /* background-color: aqua; */
+    width: 210px;
+    height: 35px;
+    /* border: .2mm solid; */
+    margin-left: 3%;
+    padding: 4%;
+
+
+    color: #201f1a;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    /* transform: skewY(-10deg); */
+
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5), 0px -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.de{
+    width: 100%;
+    /* border: solid; */
+    display: flex;
+    margin: 2%;
+    margin-top: 6%;
+    gap: 1cap;
+    
+}
+
+.chn{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    /* border: solid; */
+    font-size: 60%;
+
+    color: #201f1a;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5), 0px -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.ex{
+    margin: 0%;
+    display: flex;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+
+    color: #201f1a;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5), 0px -1px 1px rgba(0, 0, 0, 0.5);
+
+ } 
+
+ .ex #expire{
+    /* font-size: 90%; */
+    font-size: 80%;
+    width: 30px;
+    
+ }
+
+
+
+
+/*for content  */
+.content{
+    margin: 1%;
+    padding: 1%;
+    border: 0.2cap solid rgb(237, 226, 226);
+    border-radius: 2%;
+    box-shadow: 0 0 10px rgb(158, 126, 126);
+    background-color: white;
+    width: 310px;
+    /* margin-left: 50%; */
+
+    
+    /* position: relative; */
+    /* z-index: 0; */
+    
+}
+
+.fff{
+    margin-top: 25%;
+}
+
+button, input, select{
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+}
+
+button{
+    margin-top: 5%;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    background-color: rgb(10, 1, 27);
+    color: rgb(17, 0, 255);
+}
+
+
+.front.visa , .back.visa{
+    background-color: rgb(38, 38, 119);
+}
+
+.front.mastercard , .back.mastercard{
+    background-color: rgb(20, 20, 115);
+}
+
+.front.americanexpress , .back.americanexpress{
+    background-color: rgb(50, 175, 210);
+}
+
+.front.jcb , .back.jcb{
+    background-color: rgb(18, 74, 126);
+}
+
+.front.visaelectron , .back.visaelectron{
+    background-color: rgb(17, 13, 138);
+}
+
+.front.maestro , .back.maestro{
+    background-color: rgb(19, 15, 121);
+}
